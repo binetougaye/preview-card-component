@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    position: relative;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+}
+h4 {
+    font-size: 26px;
+}
+
+.carte {
+    background-color: hsl(244, 38%, 16%);
+    padding: 48px;
+}
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.stat-heading {
+    color: hsl(0, 0%, 100%);
+    font-size: 23px;
+    font-weight: bold;
+}
+.heading {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+img {
+    width: 100%;
+}
+.image {
+    background: url("./images/image-header-desktop.jpg") no-repeat center/cover;
+    position: relative;
+    height: 50vh;
+}
+
+/* Blur and Tint Effect */
+.image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 61%, 0.6); /* Tint color */
+    backdrop-filter: blur(1px); /* Blur effect */
+    z-index: 1;
+}
+@media screen and (max-width: 991px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .stats {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+}
